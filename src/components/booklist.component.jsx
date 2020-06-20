@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import {ThemeContext} from '../contexts/ThemeContext'
 
 export default class BookList extends Component{
+    //Can only use this approach of static context types with class based components and if there aren't multiple contexts
     static contextType = ThemeContext
     render(){
         const {isLightTheme, light, dark} = this.context

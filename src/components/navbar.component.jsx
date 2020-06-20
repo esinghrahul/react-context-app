@@ -10,6 +10,8 @@ export default class Navbar extends Component {
     // const {isLightTheme, light, dark} = this.context
     // const theme= isLightTheme ? light : dark
     return (
+        //Context.Consumer approach can be used with functional components as well as with multiple contexts
+        //Context.Consumer expects a function which has context object as parameter and expects to return JSX
       <AuthContext.Consumer>{(authContext) => (
           <ThemeContext.Consumer>{(themeContext) => {
               const {isAuthenticated, toggleAuth} = authContext
