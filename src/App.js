@@ -4,6 +4,7 @@ import BookList from "./components/booklist.component";
 import ThemeContextProvider from "./contexts/ThemeContext";
 import AuthContextProvider from "./contexts/AuthContext";
 import ThemeToggle from "./components/theme-toggle.component";
+import BookContextProvider from "./contexts/BookContext";
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
       <ThemeContextProvider>
         <AuthContextProvider>
           <Navbar />
+          <BookContextProvider>
           <BookList />
+          </BookContextProvider>
         </AuthContextProvider>
         <ThemeToggle />
       </ThemeContextProvider>
